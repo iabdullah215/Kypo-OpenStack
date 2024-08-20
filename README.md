@@ -1,2 +1,2 @@
-# Kypo OpenStack Deployment
+# Kypo OpenStack Deployment Guide
 

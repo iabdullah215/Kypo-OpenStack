@@ -15,7 +15,9 @@ First thing first download the configuration files given above.
 
 First, you must set your VM ware Configuration according to the following Screenshot.
 
-![image](https://github.com/user-attachments/assets/34524ad0-77c4-4606-981f-65d77ac9a23e)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/34524ad0-77c4-4606-981f-65d77ac9a23e">
+</p>
 
 Set RAM to 8 GB Minimum you can Use 16 GB or 24 GB depending upon your RAM size.
 
@@ -32,11 +34,15 @@ Make sure to match the configuration with the first screenshot at the top of thi
 
 Please ensure that your internet is working properly and that all adapters are functioning correctly. You can check them from the VMware Status bar or the Network panel of CentOS. Currently, `ens224` is turned off.
 
-![image](https://github.com/user-attachments/assets/fdf1e974-56fc-45d9-a9d0-ba56e8b7f0ab)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/fdf1e974-56fc-45d9-a9d0-ba56e8b7f0ab">
+</p>
 
 On Desktop, click on activities Open terminal the terminal.
 
-![image](https://github.com/user-attachments/assets/a762b5be-2129-4c82-a207-13140abfd0c1)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/a762b5be-2129-4c82-a207-13140abfd0c1">
+</p>
 
 Now use this Command for the OpenStack local hostname.
 
@@ -47,7 +53,9 @@ hostnamectl set-hostname openstackio --static
 
 `openstackio` is the name. You can use any name of your choice. This execution of the command will set the local hostname only. This execution of the Command will result in nothing and will set the local host name only.
 
-![image](https://github.com/user-attachments/assets/21291504-24e6-4556-8698-ceb56968d16a)
+<p align="center">
+<img width="60%" src="ttps://github.com/user-attachments/assets/21291504-24e6-4556-8698-ceb56968d16a">
+</p>
 
 To configure your IP with your local host. I use an ens160 IP address. Use the command to map your IP to the local host. The name for the local host should be the same as set in the previous command. Then use the cat command with directories to verify your mapping:
 
@@ -56,7 +64,9 @@ echo "192.168.109.128 openstackio" >> /etc/hosts
 cat /etc/hosts
 ```
 
-![image](https://github.com/user-attachments/assets/41adbdda-b856-4c15-a9d0-81f37f3ca3f2)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/41adbdda-b856-4c15-a9d0-81f37f3ca3f2">
+</p>
 
 Now use these Commands:
 
@@ -65,7 +75,9 @@ setenforce 0
 sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
 ```
 
-![image](https://github.com/user-attachments/assets/e098d675-565e-41ee-a30a-091dfbba6a5e)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/e098d675-565e-41ee-a30a-091dfbba6a5e">
+</p>
 
 Now use the following command the following command to install the network
 
@@ -73,11 +85,15 @@ Now use the following command the following command to install the network
 scripts dnf install network-scripts -y
 ```
 
-![image](https://github.com/user-attachments/assets/67408b5a-8042-4316-8430-1249fdf0e427)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/67408b5a-8042-4316-8430-1249fdf0e427">
+</p>
 
 Upon completing this, the following output will be displayed.
 
-![image](https://github.com/user-attachments/assets/6778efec-5821-4070-8989-b36c1f1b0738)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/6778efec-5821-4070-8989-b36c1f1b0738">
+</p>
 
 Now use the following back-to-back commands.
 
@@ -87,13 +103,19 @@ systemctl enable - now network
 dnf -y install lvm2
 ```
 
-![image](https://github.com/user-attachments/assets/e9627de4-21dc-4b4a-8327-148fd58b8c8c)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/e9627de4-21dc-4b4a-8327-148fd58b8c8c">
+</p>
 
-![image](https://github.com/user-attachments/assets/5ba15787-3fc8-4b78-9818-139aa544af3a)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/5ba15787-3fc8-4b78-9818-139aa544af3a">
+</p>
 
 Upon completing this, the following output will be displayed.
 
-![image](https://github.com/user-attachments/assets/2e81c958-12ca-432c-ab3a-794cf38fd408)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/2e81c958-12ca-432c-ab3a-794cf38fd408">
+</p>
 
 Now use the following command to check the size and space of the hard drive you added in your VM configuration.
 
@@ -101,7 +123,9 @@ Now use the following command to check the size and space of the hard drive you 
 fdisk -l
 ```
 
-![image](https://github.com/user-attachments/assets/5f3995f5-e106-4b20-b0da-dd07efc1a877)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/5f3995f5-e106-4b20-b0da-dd07efc1a877">
+</p>
 
 Now use these commands for more configuration making tables and groups in free space.
 
@@ -113,10 +137,13 @@ vgs
 mkfs.ext4 /dev/nvme0n3 
 mkfs.ext4 /dev/nvme0n4
 ```
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/8dccf324-1297-4811-8d5a-250803c6e966">
+</p>
 
-![image](https://github.com/user-attachments/assets/8dccf324-1297-4811-8d5a-250803c6e966)
-
-![image](https://github.com/user-attachments/assets/681457e7-8f3d-4622-a226-82e2891c15a0)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/681457e7-8f3d-4622-a226-82e2891c15a0">
+</p>
 
 Now use this Command:
 
@@ -124,20 +151,28 @@ Now use this Command:
 yum install dnf-plugins-core
 ```
 
-![image](https://github.com/user-attachments/assets/acfe6ec3-b403-4bf5-9895-8fa067a552da)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/acfe6ec3-b403-4bf5-9895-8fa067a552da">
+</p>
 
 Upon completing this, the following output will be displayed.
 
-![image](https://github.com/user-attachments/assets/31ff6566-55db-4a25-a7a5-35fcbb6f6e1a)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/31ff6566-55db-4a25-a7a5-35fcbb6f6e1a">
+</p>
 
 ```console
 yum config-manager - set-enabled powertools
 dnf install -y centos-release-openstack-train
 ```
 
-![image](https://github.com/user-attachments/assets/1754cc82-c838-4933-8492-cdcceb194197)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/1754cc82-c838-4933-8492-cdcceb194197">
+</p>
 
-![image](https://github.com/user-attachments/assets/2d971b23-ebc0-4330-8b10-3280e73738ae)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/2d971b23-ebc0-4330-8b10-3280e73738ae">
+</p>
 
 After this, we will utilize the following command to install the necessary and additional packages, which will take some time.
 
@@ -145,11 +180,15 @@ After this, we will utilize the following command to install the necessary and a
 dnf update –y
 ```
 
-![image](https://github.com/user-attachments/assets/b4261c70-a2a8-4985-8c88-c2a59ad75a37)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/b4261c70-a2a8-4985-8c88-c2a59ad75a37">
+</p>
 
 Upon completing this, the following output will be displayed.
 
-![image](https://github.com/user-attachments/assets/be12740d-0877-4ebd-ad0c-6d758f7ae8e4)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/be12740d-0877-4ebd-ad0c-6d758f7ae8e4">
+</p>
 
 Now it’s time to install OpenStack. Use the following command to install OpenStack. It will also take some time to download and install packages. Also, you need some changes in the configuration file in `yum.repos.d`.
 
@@ -157,11 +196,15 @@ Now it’s time to install OpenStack. Use the following command to install OpenS
 dnf install -y openstack-packstack
 ```
 
-![image](https://github.com/user-attachments/assets/fcc9844a-e8e2-4f76-b276-3d24cdda95d1)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/fcc9844a-e8e2-4f76-b276-3d24cdda95d1">
+</p>
 
 Upon completing this, the following output will be displayed.
 
-![image](https://github.com/user-attachments/assets/147af082-4743-4c9a-b6fc-f585e6aca3bc)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/147af082-4743-4c9a-b6fc-f585e6aca3bc">
+</p>
 
 Now use these commands to allow access to file of Configuration.
 
@@ -169,7 +212,9 @@ Now use these commands to allow access to file of Configuration.
 packstack --gen-answer-file=answer.txt
 ```
 
-![image](https://github.com/user-attachments/assets/45d1e187-1215-4b77-b9d1-4bc18c626ed3)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/45d1e187-1215-4b77-b9d1-4bc18c626ed3">
+</p>
 
 Now, use `nano` to edit the configuration file `answer.txt`. Search and make changes to the following lines. Use `ctrl+w` to search and arrows to move the cursor.
 
@@ -201,8 +246,9 @@ CONFIG_PROVISION_DEMO=n
 ```console
 packstack --answer-file=answer.txt
 ```
-
-![image](https://github.com/user-attachments/assets/9e424772-20b4-4633-b47f-17814f04ec7c)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/9e424772-20b4-4633-b47f-17814f04ec7c">
+</p>
 
 Upon completing this, the following output will be displayed.
 

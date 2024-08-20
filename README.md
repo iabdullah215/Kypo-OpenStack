@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/acba7518-af52-4856-b50b-869aea1dc120)
+<p align="center">
+<img width="60%" src="https://github.com/user-attachments/assets/acba7518-af52-4856-b50b-869aea1dc120">
+</p>
 
 # Kypo OpenStack Deployment Guide
 
